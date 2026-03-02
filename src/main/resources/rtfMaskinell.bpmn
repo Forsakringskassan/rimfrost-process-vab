@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn2:definitions xmlns:bpmn2="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:bpsim="http://www.bpsim.org/schemas/1.0" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:drools="http://www.jboss.org/drools" xmlns:xsi="xsi" id="_qwsSkOfkED6wKL4B-r9zIw" xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL BPMN20.xsd http://www.jboss.org/drools drools.xsd http://www.bpsim.org/schemas/1.0 bpsim.xsd http://www.omg.org/spec/DD/20100524/DC DC.xsd http://www.omg.org/spec/DD/20100524/DI DI.xsd " exporter="jBPM Process Modeler" exporterVersion="2.0" targetNamespace="http://www.omg.org/bpmn20">
+  <bpmn2:itemDefinition id="_requestItem" structureRef="se.fk.rimfrost.framework.regel.RegelRequestMessagePayloadData"/>
+  <bpmn2:itemDefinition id="_resultItem" structureRef="se.fk.rimfrost.framework.regel.Utfall"/>
+  <bpmn2:itemDefinition id="_kundbehovsflodeIdItem" structureRef="String"/>
+  <bpmn2:itemDefinition id="_responseItem" structureRef="se.fk.rimfrost.framework.regel.RegelResponseMessagePayloadData"/>
+  <bpmn2:itemDefinition id="_428739B8-C962-4EBE-A16B-6E2B5133D50B_InMessageType" structureRef=""/>
+  <bpmn2:itemDefinition id="_428739B8-C962-4EBE-A16B-6E2B5133D50B_OutMessageType" structureRef=""/>
+  <bpmn2:itemDefinition id="__428739B8-C962-4EBE-A16B-6E2B5133D50B_kundbehovsflodeIdInputXItem" structureRef="String"/>
+  <bpmn2:itemDefinition id="__428739B8-C962-4EBE-A16B-6E2B5133D50B_requestOutputXItem" structureRef="se.fk.rimfrost.framework.regel.RegelRequestMessagePayloadData"/>
+  <bpmn2:itemDefinition id="_EB1970E1-7AA3-44EC-98B2-981698344C2A_InMessageType" structureRef=""/>
+  <bpmn2:itemDefinition id="_EB1970E1-7AA3-44EC-98B2-981698344C2A_OutMessageType" structureRef=""/>
+  <bpmn2:itemDefinition id="__EB1970E1-7AA3-44EC-98B2-981698344C2A_responseInputXItem" structureRef="se.fk.rimfrost.framework.regel.RegelResponseMessagePayloadData"/>
+  <bpmn2:itemDefinition id="__EB1970E1-7AA3-44EC-98B2-981698344C2A_resultOutputXItem" structureRef="se.fk.rimfrost.framework.regel.Utfall"/>
+  <bpmn2:itemDefinition id="__65DE9E0A-5F30-4DDB-A696-C2B92307795C_eventOutputXItem" structureRef="se.fk.rimfrost.framework.regel.RegelResponseMessagePayloadData"/>
+  <bpmn2:itemDefinition id="rtf-maskinell-responsesType" structureRef="se.fk.rimfrost.framework.regel.RegelResponseMessagePayloadData"/>
+  <bpmn2:itemDefinition id="_9561CDBA-B409-4230-AD38-0252619BAF5C" structureRef=""/>
+  <bpmn2:itemDefinition id="_1868C7F3-BB35-478C-9240-9568F1647964" structureRef=""/>
+  <bpmn2:itemDefinition id="__E496A906-CCA2-4DAD-8E76-D5F0E5FDB341_requestInputXItem" structureRef="se.fk.rimfrost.framework.regel.RegelRequestMessagePayloadData"/>
+  <bpmn2:itemDefinition id="rtf-maskinell-requestsType" structureRef="se.fk.rimfrost.framework.regel.RegelRequestMessagePayloadData"/>
+  <bpmn2:message id="_428739B8-C962-4EBE-A16B-6E2B5133D50B_InMessage" itemRef="_428739B8-C962-4EBE-A16B-6E2B5133D50B_InMessageType"/>
+  <bpmn2:message id="_428739B8-C962-4EBE-A16B-6E2B5133D50B_OutMessage" itemRef="_428739B8-C962-4EBE-A16B-6E2B5133D50B_OutMessageType"/>
+  <bpmn2:interface id="_428739B8-C962-4EBE-A16B-6E2B5133D50B_ServiceInterface" name="se.fk.github.rimfrost.vardavboskap.common.RegelService" implementationRef="se.fk.github.rimfrost.vardavboskap.common.RegelService">
+    <bpmn2:operation id="_428739B8-C962-4EBE-A16B-6E2B5133D50B_ServiceOperation" name="createRegelRequest" implementationRef="createRegelRequest">
+      <bpmn2:inMessageRef>_428739B8-C962-4EBE-A16B-6E2B5133D50B_InMessage</bpmn2:inMessageRef>
+      <bpmn2:outMessageRef>_428739B8-C962-4EBE-A16B-6E2B5133D50B_OutMessage</bpmn2:outMessageRef>
+    </bpmn2:operation>
+  </bpmn2:interface>
+  <bpmn2:message id="_EB1970E1-7AA3-44EC-98B2-981698344C2A_InMessage" itemRef="_EB1970E1-7AA3-44EC-98B2-981698344C2A_InMessageType"/>
+  <bpmn2:message id="_EB1970E1-7AA3-44EC-98B2-981698344C2A_OutMessage" itemRef="_EB1970E1-7AA3-44EC-98B2-981698344C2A_OutMessageType"/>
+  <bpmn2:interface id="_EB1970E1-7AA3-44EC-98B2-981698344C2A_ServiceInterface" name="se.fk.github.rimfrost.vardavboskap.common.RegelService" implementationRef="se.fk.github.rimfrost.vardavboskap.common.RegelService">
+    <bpmn2:operation id="_EB1970E1-7AA3-44EC-98B2-981698344C2A_ServiceOperation" name="onRegelResponse" implementationRef="onRegelResponse">
+      <bpmn2:inMessageRef>_EB1970E1-7AA3-44EC-98B2-981698344C2A_InMessage</bpmn2:inMessageRef>
+      <bpmn2:outMessageRef>_EB1970E1-7AA3-44EC-98B2-981698344C2A_OutMessage</bpmn2:outMessageRef>
+    </bpmn2:operation>
+  </bpmn2:interface>
+  <bpmn2:message id="_qwtgsOfkED6wKL4B-r9zIw" itemRef="rtf-maskinell-responsesType" name="rtf-maskinell-responses"/>
+  <bpmn2:message id="_qwtgsefkED6wKL4B-r9zIw" itemRef="rtf-maskinell-requestsType" name="rtf-maskinell-requests"/>
+  <bpmn2:collaboration id="_12E634DF-7C64-44B2-A939-18D108D36F48" name="Default Collaboration">
+    <bpmn2:participant id="_1C001384-2469-4FD9-BDA2-85C0868DAED9" name="Pool Participant" processRef="rtfMaskinell"/>
+  </bpmn2:collaboration>
+  <bpmn2:process id="rtfMaskinell" drools:packageName="vab" drools:version="1.0" drools:adHoc="false" name="rtf" isExecutable="true" processType="Public">
+    <bpmn2:property id="request" itemSubjectRef="_requestItem" name="request"/>
+    <bpmn2:property id="result" itemSubjectRef="_resultItem" name="result"/>
+    <bpmn2:property id="kundbehovsflodeId" itemSubjectRef="_kundbehovsflodeIdItem" name="kundbehovsflodeId"/>
+    <bpmn2:property id="response" itemSubjectRef="_responseItem" name="response"/>
+    <bpmn2:sequenceFlow id="_85DA7746-3E8E-4748-8241-725D0252E4A4" sourceRef="_E496A906-CCA2-4DAD-8E76-D5F0E5FDB341" targetRef="_65DE9E0A-5F30-4DDB-A696-C2B92307795C"/>
+    <bpmn2:sequenceFlow id="_85F12895-3257-4428-B1F5-F3AE41CE5568" sourceRef="_65DE9E0A-5F30-4DDB-A696-C2B92307795C" targetRef="_EB1970E1-7AA3-44EC-98B2-981698344C2A"/>
+    <bpmn2:sequenceFlow id="_EA91DB89-488A-498E-8D80-CD7BC5EBF35D" sourceRef="_EB1970E1-7AA3-44EC-98B2-981698344C2A" targetRef="_BD7829DE-03C9-4620-BB21-BBA0F8F7E2C7"/>
+    <bpmn2:sequenceFlow id="_063C7BBE-FF5D-4ECE-BDB4-D106EF83B377" sourceRef="_428739B8-C962-4EBE-A16B-6E2B5133D50B" targetRef="_E496A906-CCA2-4DAD-8E76-D5F0E5FDB341"/>
+    <bpmn2:sequenceFlow id="_9CED9132-2CF3-4916-A88C-2B6322A6C001" sourceRef="_39F10672-EEFA-4AED-9E31-2F408D704404" targetRef="_428739B8-C962-4EBE-A16B-6E2B5133D50B"/>
+    <bpmn2:intermediateThrowEvent id="_E496A906-CCA2-4DAD-8E76-D5F0E5FDB341">
+      <bpmn2:incoming>_063C7BBE-FF5D-4ECE-BDB4-D106EF83B377</bpmn2:incoming>
+      <bpmn2:outgoing>_85DA7746-3E8E-4748-8241-725D0252E4A4</bpmn2:outgoing>
+      <bpmn2:dataInput id="_E496A906-CCA2-4DAD-8E76-D5F0E5FDB341_requestInputX" drools:dtype="se.fk.rimfrost.framework.regel.RegelRequestMessagePayloadData" itemSubjectRef="__E496A906-CCA2-4DAD-8E76-D5F0E5FDB341_requestInputXItem" name="request"/>
+      <bpmn2:dataInputAssociation>
+        <bpmn2:sourceRef>request</bpmn2:sourceRef>
+        <bpmn2:targetRef>_E496A906-CCA2-4DAD-8E76-D5F0E5FDB341_requestInputX</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:inputSet>
+        <bpmn2:dataInputRefs>_E496A906-CCA2-4DAD-8E76-D5F0E5FDB341_requestInputX</bpmn2:dataInputRefs>
+      </bpmn2:inputSet>
+      <bpmn2:messageEventDefinition drools:msgref="rtf-maskinell-requests" messageRef="_qwtgsefkED6wKL4B-r9zIw"/>
+    </bpmn2:intermediateThrowEvent>
+    <bpmn2:intermediateCatchEvent id="_65DE9E0A-5F30-4DDB-A696-C2B92307795C">
+      <bpmn2:incoming>_85DA7746-3E8E-4748-8241-725D0252E4A4</bpmn2:incoming>
+      <bpmn2:outgoing>_85F12895-3257-4428-B1F5-F3AE41CE5568</bpmn2:outgoing>
+      <bpmn2:dataOutput id="_65DE9E0A-5F30-4DDB-A696-C2B92307795C_eventOutputX" drools:dtype="se.fk.rimfrost.framework.regel.RegelResponseMessagePayloadData" itemSubjectRef="__65DE9E0A-5F30-4DDB-A696-C2B92307795C_eventOutputXItem" name="event"/>
+      <bpmn2:dataOutputAssociation>
+        <bpmn2:sourceRef>_65DE9E0A-5F30-4DDB-A696-C2B92307795C_eventOutputX</bpmn2:sourceRef>
+        <bpmn2:targetRef>response</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:outputSet>
+        <bpmn2:dataOutputRefs>_65DE9E0A-5F30-4DDB-A696-C2B92307795C_eventOutputX</bpmn2:dataOutputRefs>
+      </bpmn2:outputSet>
+      <bpmn2:messageEventDefinition drools:msgref="rtf-maskinell-responses" messageRef="_qwtgsOfkED6wKL4B-r9zIw"/>
+    </bpmn2:intermediateCatchEvent>
+    <bpmn2:serviceTask id="_EB1970E1-7AA3-44EC-98B2-981698344C2A" drools:serviceimplementation="Java" drools:serviceinterface="se.fk.github.rimfrost.vardavboskap.common.RegelService" drools:serviceoperation="onRegelResponse" name="Received RTF Response" implementation="Java" operationRef="_EB1970E1-7AA3-44EC-98B2-981698344C2A_ServiceOperation">
+      <bpmn2:extensionElements>
+        <drools:metaData name="elementname">
+          <drools:metaValue><![CDATA[Received RTF Response]]></drools:metaValue>
+        </drools:metaData>
+      </bpmn2:extensionElements>
+      <bpmn2:incoming>_85F12895-3257-4428-B1F5-F3AE41CE5568</bpmn2:incoming>
+      <bpmn2:outgoing>_EA91DB89-488A-498E-8D80-CD7BC5EBF35D</bpmn2:outgoing>
+      <bpmn2:ioSpecification>
+        <bpmn2:dataInput id="_EB1970E1-7AA3-44EC-98B2-981698344C2A_responseInputX" drools:dtype="se.fk.rimfrost.framework.regel.RegelResponseMessagePayloadData" itemSubjectRef="__EB1970E1-7AA3-44EC-98B2-981698344C2A_responseInputXItem" name="response"/>
+        <bpmn2:dataOutput id="_EB1970E1-7AA3-44EC-98B2-981698344C2A_resultOutputX" drools:dtype="se.fk.rimfrost.framework.regel.Utfall" itemSubjectRef="__EB1970E1-7AA3-44EC-98B2-981698344C2A_resultOutputXItem" name="result"/>
+        <bpmn2:inputSet>
+          <bpmn2:dataInputRefs>_EB1970E1-7AA3-44EC-98B2-981698344C2A_responseInputX</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet>
+          <bpmn2:dataOutputRefs>_EB1970E1-7AA3-44EC-98B2-981698344C2A_resultOutputX</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation>
+        <bpmn2:sourceRef>response</bpmn2:sourceRef>
+        <bpmn2:targetRef>_EB1970E1-7AA3-44EC-98B2-981698344C2A_responseInputX</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation>
+        <bpmn2:sourceRef>_EB1970E1-7AA3-44EC-98B2-981698344C2A_resultOutputX</bpmn2:sourceRef>
+        <bpmn2:targetRef>result</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+    </bpmn2:serviceTask>
+    <bpmn2:endEvent id="_BD7829DE-03C9-4620-BB21-BBA0F8F7E2C7">
+      <bpmn2:incoming>_EA91DB89-488A-498E-8D80-CD7BC5EBF35D</bpmn2:incoming>
+    </bpmn2:endEvent>
+    <bpmn2:serviceTask id="_428739B8-C962-4EBE-A16B-6E2B5133D50B" drools:serviceimplementation="Java" drools:serviceinterface="se.fk.github.rimfrost.vardavboskap.common.RegelService" drools:serviceoperation="createRegelRequest" name="Create RTF Request" implementation="Java" operationRef="_428739B8-C962-4EBE-A16B-6E2B5133D50B_ServiceOperation">
+      <bpmn2:extensionElements>
+        <drools:metaData name="elementname">
+          <drools:metaValue><![CDATA[Create RTF Request]]></drools:metaValue>
+        </drools:metaData>
+      </bpmn2:extensionElements>
+      <bpmn2:incoming>_9CED9132-2CF3-4916-A88C-2B6322A6C001</bpmn2:incoming>
+      <bpmn2:outgoing>_063C7BBE-FF5D-4ECE-BDB4-D106EF83B377</bpmn2:outgoing>
+      <bpmn2:ioSpecification>
+        <bpmn2:dataInput id="_428739B8-C962-4EBE-A16B-6E2B5133D50B_kundbehovsflodeIdInputX" drools:dtype="String" itemSubjectRef="__428739B8-C962-4EBE-A16B-6E2B5133D50B_kundbehovsflodeIdInputXItem" name="kundbehovsflodeId"/>
+        <bpmn2:dataOutput id="_428739B8-C962-4EBE-A16B-6E2B5133D50B_requestOutputX" drools:dtype="se.fk.rimfrost.framework.regel.RegelRequestMessagePayloadData" itemSubjectRef="__428739B8-C962-4EBE-A16B-6E2B5133D50B_requestOutputXItem" name="request"/>
+        <bpmn2:inputSet>
+          <bpmn2:dataInputRefs>_428739B8-C962-4EBE-A16B-6E2B5133D50B_kundbehovsflodeIdInputX</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet>
+          <bpmn2:dataOutputRefs>_428739B8-C962-4EBE-A16B-6E2B5133D50B_requestOutputX</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation>
+        <bpmn2:sourceRef>kundbehovsflodeId</bpmn2:sourceRef>
+        <bpmn2:targetRef>_428739B8-C962-4EBE-A16B-6E2B5133D50B_kundbehovsflodeIdInputX</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation>
+        <bpmn2:sourceRef>_428739B8-C962-4EBE-A16B-6E2B5133D50B_requestOutputX</bpmn2:sourceRef>
+        <bpmn2:targetRef>request</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+    </bpmn2:serviceTask>
+    <bpmn2:startEvent id="_39F10672-EEFA-4AED-9E31-2F408D704404" name="Application">
+      <bpmn2:extensionElements>
+        <drools:metaData name="elementname">
+          <drools:metaValue><![CDATA[Application]]></drools:metaValue>
+        </drools:metaData>
+      </bpmn2:extensionElements>
+      <bpmn2:outgoing>_9CED9132-2CF3-4916-A88C-2B6322A6C001</bpmn2:outgoing>
+    </bpmn2:startEvent>
+  </bpmn2:process>
+  <bpmndi:BPMNDiagram>
+    <bpmndi:BPMNPlane bpmnElement="rtfMaskinell">
+      <bpmndi:BPMNShape id="shape__39F10672-EEFA-4AED-9E31-2F408D704404" bpmnElement="_39F10672-EEFA-4AED-9E31-2F408D704404">
+        <dc:Bounds height="56" width="56" x="171" y="203"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="shape__428739B8-C962-4EBE-A16B-6E2B5133D50B" bpmnElement="_428739B8-C962-4EBE-A16B-6E2B5133D50B">
+        <dc:Bounds height="102" width="154" x="314" y="180"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="shape__BD7829DE-03C9-4620-BB21-BBA0F8F7E2C7" bpmnElement="_BD7829DE-03C9-4620-BB21-BBA0F8F7E2C7">
+        <dc:Bounds height="56" width="56" x="1046" y="203"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="shape__EB1970E1-7AA3-44EC-98B2-981698344C2A" bpmnElement="_EB1970E1-7AA3-44EC-98B2-981698344C2A">
+        <dc:Bounds height="102" width="154" x="814" y="180"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="shape__65DE9E0A-5F30-4DDB-A696-C2B92307795C" bpmnElement="_65DE9E0A-5F30-4DDB-A696-C2B92307795C">
+        <dc:Bounds height="56" width="56" x="680" y="203"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="shape__E496A906-CCA2-4DAD-8E76-D5F0E5FDB341" bpmnElement="_E496A906-CCA2-4DAD-8E76-D5F0E5FDB341">
+        <dc:Bounds height="56" width="56" x="546" y="203"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="edge_shape__39F10672-EEFA-4AED-9E31-2F408D704404_to_shape__428739B8-C962-4EBE-A16B-6E2B5133D50B" bpmnElement="_9CED9132-2CF3-4916-A88C-2B6322A6C001">
+        <di:waypoint x="199" y="231"/>
+        <di:waypoint x="314" y="231"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="edge_shape__428739B8-C962-4EBE-A16B-6E2B5133D50B_to_shape__E496A906-CCA2-4DAD-8E76-D5F0E5FDB341" bpmnElement="_063C7BBE-FF5D-4ECE-BDB4-D106EF83B377">
+        <di:waypoint x="391" y="231"/>
+        <di:waypoint x="546" y="231"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="edge_shape__EB1970E1-7AA3-44EC-98B2-981698344C2A_to_shape__BD7829DE-03C9-4620-BB21-BBA0F8F7E2C7" bpmnElement="_EA91DB89-488A-498E-8D80-CD7BC5EBF35D">
+        <di:waypoint x="891" y="231"/>
+        <di:waypoint x="1046" y="231"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="edge_shape__65DE9E0A-5F30-4DDB-A696-C2B92307795C_to_shape__EB1970E1-7AA3-44EC-98B2-981698344C2A" bpmnElement="_85F12895-3257-4428-B1F5-F3AE41CE5568">
+        <di:waypoint x="736" y="231"/>
+        <di:waypoint x="814" y="231"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="edge_shape__E496A906-CCA2-4DAD-8E76-D5F0E5FDB341_to_shape__65DE9E0A-5F30-4DDB-A696-C2B92307795C" bpmnElement="_85DA7746-3E8E-4748-8241-725D0252E4A4">
+        <di:waypoint x="574" y="231"/>
+        <di:waypoint x="680" y="231"/>
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+  <bpmn2:relationship type="BPSimData">
+    <bpmn2:extensionElements>
+      <bpsim:BPSimData>
+        <bpsim:Scenario id="default" name="Simulationscenario">
+          <bpsim:ScenarioParameters/>
+          <bpsim:ElementParameters elementRef="_39F10672-EEFA-4AED-9E31-2F408D704404">
+            <bpsim:TimeParameters>
+              <bpsim:ProcessingTime>
+                <bpsim:NormalDistribution mean="0" standardDeviation="0"/>
+              </bpsim:ProcessingTime>
+            </bpsim:TimeParameters>
+          </bpsim:ElementParameters>
+          <bpsim:ElementParameters elementRef="_428739B8-C962-4EBE-A16B-6E2B5133D50B">
+            <bpsim:TimeParameters>
+              <bpsim:ProcessingTime>
+                <bpsim:NormalDistribution mean="0" standardDeviation="0"/>
+              </bpsim:ProcessingTime>
+            </bpsim:TimeParameters>
+            <bpsim:ResourceParameters>
+              <bpsim:Availability>
+                <bpsim:FloatingParameter value="0"/>
+              </bpsim:Availability>
+              <bpsim:Quantity>
+                <bpsim:FloatingParameter value="0"/>
+              </bpsim:Quantity>
+            </bpsim:ResourceParameters>
+            <bpsim:CostParameters>
+              <bpsim:UnitCost>
+                <bpsim:FloatingParameter value="0"/>
+              </bpsim:UnitCost>
+            </bpsim:CostParameters>
+          </bpsim:ElementParameters>
+          <bpsim:ElementParameters elementRef="_EB1970E1-7AA3-44EC-98B2-981698344C2A">
+            <bpsim:TimeParameters>
+              <bpsim:ProcessingTime>
+                <bpsim:NormalDistribution mean="0" standardDeviation="0"/>
+              </bpsim:ProcessingTime>
+            </bpsim:TimeParameters>
+            <bpsim:ResourceParameters>
+              <bpsim:Availability>
+                <bpsim:FloatingParameter value="0"/>
+              </bpsim:Availability>
+              <bpsim:Quantity>
+                <bpsim:FloatingParameter value="0"/>
+              </bpsim:Quantity>
+            </bpsim:ResourceParameters>
+            <bpsim:CostParameters>
+              <bpsim:UnitCost>
+                <bpsim:FloatingParameter value="0"/>
+              </bpsim:UnitCost>
+            </bpsim:CostParameters>
+          </bpsim:ElementParameters>
+        </bpsim:Scenario>
+      </bpsim:BPSimData>
+    </bpmn2:extensionElements>
+    <bpmn2:source>_qwsSkOfkED6wKL4B-r9zIw</bpmn2:source>
+    <bpmn2:target>_qwsSkOfkED6wKL4B-r9zIw</bpmn2:target>
+  </bpmn2:relationship>
+</bpmn2:definitions>
