@@ -7,11 +7,11 @@
 #
 # Then, build the image with:
 #
-# docker build -f src/main/docker/Dockerfile.native -t quarkus/process-kafka-quickstart-quarkus .
+# docker build -f src/main/docker/Dockerfile.native -t rimfrost/rimfrost-process-vab .
 #
 # Then run the container using:
 #
-# docker run -i --rm -p 8080:8080 quarkus/process-kafka-quickstart-quarkus
+# docker run -i --rm -p 8080:8080 rimfrost/rimfrost-process-vab
 #
 ###
 FROM --platform=linux/amd64 registry.access.redhat.com/ubi9/ubi-minimal:9.6-1758184547

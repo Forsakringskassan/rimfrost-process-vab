@@ -5,7 +5,7 @@
   <parent>
     <groupId>se.fk.maven</groupId>
     <artifactId>fk-maven-quarkus-parent</artifactId>
-    <version>1.11.1</version>
+    <version>1.12.0</version>
   </parent>
 
   <groupId>se.fk.github.rimfrost</groupId>
@@ -53,8 +53,24 @@
       <artifactId>kie-addons-quarkus-messaging</artifactId>
     </dependency>
     <dependency>
+      <groupId>org.kie</groupId>
+      <artifactId>kie-addons-quarkus-persistence-jdbc</artifactId>
+    </dependency>
+    <dependency>
       <groupId>org.jbpm</groupId>
       <artifactId>jbpm-with-drools-quarkus</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>io.quarkus</groupId>
+      <artifactId>quarkus-agroal</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>io.quarkus</groupId>
+      <artifactId>quarkus-jdbc-postgresql</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.kie</groupId>
+      <artifactId>kie-addons-quarkus-flyway</artifactId>
     </dependency>
 
     <dependency>
@@ -78,31 +94,24 @@
       <artifactId>quarkus-smallrye-health</artifactId>
     </dependency>
     <dependency>
-      <groupId>org.testcontainers</groupId>
-      <artifactId>kafka</artifactId>
-      <version>1.21.4</version>
-      <scope>test</scope>
+      <groupId>se.fk.github.rimfrost.regel.subprocess</groupId>
+      <artifactId>rimfrost-regel-rtf-manuell-subprocess</artifactId>
+      <version>1.1.3</version>
     </dependency>
     <dependency>
-      <groupId>org.testcontainers</groupId>
-      <artifactId>testcontainers</artifactId>
-      <version>1.21.4</version>
-      <scope>test</scope>
+      <groupId>se.fk.github.rimfrost.regel.subprocess</groupId>
+      <artifactId>rimfrost-regel-rtf-maskinell-subprocess</artifactId>
+      <version>1.1.3</version>
     </dependency>
     <dependency>
-      <groupId>se.fk.rimfrost.api.vardavhusdjur</groupId>
-      <artifactId>rimfrost-vard-av-husdjur-api-jaxrs-spec</artifactId>
-      <version>0.1.0</version>
+      <groupId>se.fk.github.rimfrost.regel.subprocess</groupId>
+      <artifactId>rimfrost-regel-bekraftabeslut-subprocess</artifactId>
+      <version>1.1.3</version>
     </dependency>
     <dependency>
-      <groupId>se.fk.rimfrost</groupId>
-      <artifactId>rimfrost-process-vah-asyncapi</artifactId>
-      <version>0.1.2</version>
-    </dependency>
-    <dependency>
-      <groupId>se.fk.rimfrost.framework.regel</groupId>
-      <artifactId>rimfrost-framework-regel-asyncapi</artifactId>
-      <version>0.0.0</version>
+      <groupId>se.fk.rimfrost.framework.process</groupId>
+      <artifactId>rimfrost-framework-process</artifactId>
+      <version>1.5.3</version>
     </dependency>
   </dependencies>
 
@@ -138,7 +147,36 @@
 
   <build>
     <finalName>${project.artifactId}</finalName>
+
+    <resources>
+      <resource>
+        <directory>src/main/resources</directory>
+      </resource>
+      <resource>
+        <directory>${project.build.directory}/generated-resources/bpmn</directory>
+      </resource>
+    </resources>
+
     <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-dependency-plugin</artifactId>
+        <version>3.10.0</version>
+        <executions>
+          <execution>
+            <id>unpack-bpmn</id>
+            <goals>
+              <goal>unpack-dependencies</goal>
+            </goals>
+            <phase>generate-sources</phase>
+            <configuration>
+              <includeGroupIds>se.fk.github.rimfrost</includeGroupIds>
+              <includes>**/*.bpmn</includes>
+              <outputDirectory>${project.build.directory}/generated-resources/bpmn</outputDirectory>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
       <plugin>
         <groupId>${quarkus.platform.group-id}</groupId>
         <artifactId>quarkus-maven-plugin</artifactId>
@@ -147,19 +185,6 @@
           <execution>
             <goals>
               <goal>build</goal>
-            </goals>
-          </execution>
-        </executions>
-      </plugin>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-failsafe-plugin</artifactId>
-        <version>3.5.5</version>
-        <executions>
-          <execution>
-            <goals>
-              <goal>integration-test</goal>
-              <goal>verify</goal>
             </goals>
           </execution>
         </executions>
