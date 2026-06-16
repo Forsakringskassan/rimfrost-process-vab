@@ -2,6 +2,15 @@
 
 Changelog of rimfrost-process-vab.
 
+## 0.0.2 (2026-06-16)
+
+### Bug Fixes
+
+-  Add support for reply topic ([18e97](https://github.com/Forsakringskassan/rimfrost-process-vab/commit/18e974f711dd5fc) Lars Persson)  
+
+### Dependency updates
+
+- update dependency org.apache.maven.plugins:maven-dependency-plugin to v3.11.0 ([c0839](https://github.com/Forsakringskassan/rimfrost-process-vab/commit/c0839314e586660) renovate[bot])  
 ## 0.0.1 (2026-06-08)
 
 ### Bug Fixes
