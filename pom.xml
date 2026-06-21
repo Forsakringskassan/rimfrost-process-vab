@@ -14,7 +14,7 @@
   <name>vard-av-boskap</name>
   <description>vard-av-boskap Kogito with Kafka - Quarkus</description>
   <properties>
-    <quarkus-plugin.version>3.20.3</quarkus-plugin.version>
+    <quarkus-plugin.version>3.37.0</quarkus-plugin.version>
     <quarkus.platform.artifact-id>quarkus-bom</quarkus.platform.artifact-id>
     <quarkus.platform.group-id>io.quarkus</quarkus.platform.group-id>
     <quarkus.platform.version>3.20.3</quarkus.platform.version>
