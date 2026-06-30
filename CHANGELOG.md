@@ -2,6 +2,13 @@
 
 Changelog of rimfrost-process-vab.
 
+## 0.0.3 (2026-06-30)
+
+### Bug Fixes
+
+-  Port subprocess and error handling changes from vah ([cbf4f](https://github.com/Forsakringskassan/rimfrost-process-vab/commit/cbf4f09d438f6bd) Lars Persson)  
+-  Bump pinned quarkus version ([7e25d](https://github.com/Forsakringskassan/rimfrost-process-vab/commit/7e25dcf89f07907) Lars Persson)  
+
 ## 0.0.2 (2026-06-16)
 
 ### Bug Fixes
