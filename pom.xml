@@ -94,22 +94,22 @@
     <dependency>
       <groupId>se.fk.github.rimfrost.regel.subprocess</groupId>
       <artifactId>rimfrost-regel-rtf-manuell-subprocess</artifactId>
-      <version>1.1.5</version>
+      <version>1.1.6</version>
     </dependency>
     <dependency>
       <groupId>se.fk.github.rimfrost.regel.subprocess</groupId>
       <artifactId>rimfrost-regel-rtf-maskinell-subprocess</artifactId>
-      <version>1.1.5</version>
+      <version>1.1.6</version>
     </dependency>
     <dependency>
       <groupId>se.fk.github.rimfrost.regel.subprocess</groupId>
       <artifactId>rimfrost-regel-bekraftabeslut-subprocess</artifactId>
-      <version>1.1.5</version>
+      <version>1.1.6</version>
     </dependency>
     <dependency>
       <groupId>se.fk.rimfrost.framework.process</groupId>
       <artifactId>rimfrost-framework-process</artifactId>
-      <version>1.6.2</version>
+      <version>1.6.3</version>
     </dependency>
   </dependencies>
 
