@@ -43,12 +43,16 @@ abstract class VabTestBase
    protected static final String rtfMaskinellResponseTopic = "vab-rtf-maskinell-responses";
    protected static final String rtfManuellRequestTopic = "rtf-manuell-requests";
    protected static final String rtfManuellResponseTopic = "vab-rtf-manuell-responses";
+   protected static final String rtfManuellKompletteringRequestTopic = "rtf-manuell-komplettering-requests";
+   protected static final String rtfManuellKompletteringResponseTopic = "vab-rtf-manuell-komplettering-responses";
    protected static final String bekraftaBeslutRequestTopic = "bekraftabeslut-requests";
    protected static final String bekraftaBeslutResponseTopic = "vab-bekraftabeslut-responses";
    protected static final int topicTimeout = 20;
 
    @ConfigProperty(name = "kafka.bootstrap.servers")
    protected String bootstrapServers;
+
+   protected static final Duration defaultReadTimeout = Duration.ofSeconds(120);
 
    /**
     * Reads the first message from {@code topic} whose {@code data.handlaggningId} matches the given value. Skips
@@ -57,6 +61,15 @@ abstract class VabTestBase
     */
    protected String readKafkaRequestMessage(String topic, String expectedHandlaggningId)
    {
+      return readKafkaRequestMessage(topic, expectedHandlaggningId, defaultReadTimeout);
+   }
+
+   /**
+    * Same as {@link #readKafkaRequestMessage(String, String)} but with a caller-supplied deadline, for flows that are
+    * known to take longer than the default 120 seconds (e.g. waiting out a subprocess's response timeout).
+    */
+   protected String readKafkaRequestMessage(String topic, String expectedHandlaggningId, Duration timeout)
+   {
       Properties props = new Properties();
       props.put(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG, bootstrapServers);
       props.put(ConsumerConfig.GROUP_ID_CONFIG, "test-consumer-" + UUID.randomUUID());
@@ -64,7 +77,7 @@ abstract class VabTestBase
       props.put(ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG, StringDeserializer.class.getName());
       props.put(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG, StringDeserializer.class.getName());
 
-      long deadline = System.currentTimeMillis() + Duration.ofSeconds(120).toMillis();
+      long deadline = System.currentTimeMillis() + timeout.toMillis();
       try (KafkaConsumer<String, String> consumer = new KafkaConsumer<>(props))
       {
          System.out.printf("New kafka consumer subscribing to topic: %s%n", topic);
