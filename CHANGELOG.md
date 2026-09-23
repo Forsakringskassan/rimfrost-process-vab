@@ -2,6 +2,15 @@
 
 Changelog of rimfrost-process-vab.
 
+## 0.0.4 (2026-09-23)
+
+### Bug Fixes
+
+-  Port VAH changes and bump dependencies in preparation for 1.2 ([fee95](https://github.com/Forsakringskassan/rimfrost-process-vab/commit/fee959f39cfc585) Lars Persson)  
+
+### Dependency updates
+
+- pin dependencies ([d22ef](https://github.com/Forsakringskassan/rimfrost-process-vab/commit/d22eff4dee2ee90) renovate[bot])  
 ## 0.0.3 (2026-06-30)
 
 ### Bug Fixes
