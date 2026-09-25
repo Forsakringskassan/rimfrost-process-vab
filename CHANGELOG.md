@@ -2,6 +2,14 @@
 
 Changelog of rimfrost-process-vab.
 
+## 0.0.5 (2026-09-25)
+
+### Bug Fixes
+
+-  Fix config response timeout and retry delay not being used ([f8586](https://github.com/Forsakringskassan/rimfrost-process-vab/commit/f8586685e4c9176) Lars Persson)  
+
+## rimfrost-1_2 (2026-09-23)
+
 ## 0.0.4 (2026-09-23)
 
 ### Bug Fixes
