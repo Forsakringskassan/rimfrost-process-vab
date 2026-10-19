@@ -4,7 +4,7 @@
 
 ### PVAB-FR-01 — Processbeskrivning
 
-- **PVAB-FR-01.1** Processen ska ha en processbeskrivning bredvid `vab.bpmn` enligt FPROC-FR-02.1 i `rimfrost-framework-process`.
+- **PVAB-FR-01.1** Processen ska ha en processbeskrivning bredvid `vab.bpmn` enligt FPROC-FR-02.1 i `rimfrost-framework-process`, och en dokumentations-BPMN (`docs/vab-processbeskrivning.bpmn`) som beskriver samma steg. Dokumentations-BPMN:en körs inte. Processbeskrivningen ska på sikt genereras från den.
 - **PVAB-FR-01.2** Processbeskrivningen ägs och underhålls av den som ritar och förvaltar BPMN:en.
 
 ### PVAB-FR-02 — Processvy-länk
