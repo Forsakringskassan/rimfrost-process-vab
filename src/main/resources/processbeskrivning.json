@@ -1,0 +1,24 @@
+{
+  "processId": "vab",
+  "processnamn": "Vård av boskap",
+  "steg": [
+    {
+      "id": "maskinell-kontroll",
+      "rubrik": "Maskinell kontroll av rätt till försäkring",
+      "beskrivning": "Systemet kontrollerar automatiskt om den försäkrade har rätt till försäkring.",
+      "aktiviteter": ["d4ab4820-68d9-41e0-abe1-cd8f9865d275"]
+    },
+    {
+      "id": "manuell-kontroll",
+      "rubrik": "Manuell kontroll av rätt till försäkring",
+      "beskrivning": "Handläggaren kompletterar yrkandet vid behov och bedömer rätten till försäkring när den maskinella kontrollen inte räcker.",
+      "aktiviteter": ["c58dd666-b3c1-4a30-91b8-76c3495668c6"]
+    },
+    {
+      "id": "bekrafta-beslut",
+      "rubrik": "Bekräfta beslut",
+      "beskrivning": "Handläggaren bekräftar beslutet innan den försäkrade informeras.",
+      "aktiviteter": ["8cde2355-aea5-4951-916f-08319b2f1e99"]
+    }
+  ]
+}
