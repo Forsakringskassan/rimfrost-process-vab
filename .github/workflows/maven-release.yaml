@@ -4,7 +4,7 @@ on: [workflow_dispatch]
 
 jobs:
   call-workflow:
-    uses: Forsakringskassan/.github/.github/workflows/bundle-maven-release.yaml@cbd74f159d942a8e96a9acd1dd251601839a7530 # main
-    secrets:
-      PACKAGES_RW_ACTOR: ${{ secrets.PACKAGES_RW_ACTOR }}
-      PACKAGES_RW_TOKEN: ${{ secrets.PACKAGES_RW_TOKEN }}
+    permissions:
+      contents: write
+      packages: write
+    uses: Forsakringskassan/.github/.github/workflows/bundle-maven-release.yaml@7dc0edc0051d2e7b37cfbe45b51841141ee3a835 # main
