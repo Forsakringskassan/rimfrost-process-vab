@@ -104,7 +104,7 @@
     <dependency>
       <groupId>se.fk.github.rimfrost.regel.subprocess</groupId>
       <artifactId>rimfrost-regel-bekraftabeslut-subprocess</artifactId>
-      <version>1.1.7</version>
+      <version>1.1.8</version>
     </dependency>
     <dependency>
       <groupId>se.fk.rimfrost.framework.process</groupId>
