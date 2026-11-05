@@ -13,6 +13,8 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 @QuarkusTest
 class VabSmokeTest extends VabTestBase
 {
+   private static final String processvyUrl = "/process/vab";
+
    @Test
    void testVabSmoke() throws Exception
    {
@@ -36,6 +38,7 @@ class VabSmokeTest extends VabTestBase
             RegelRequestMessagePayload.class);
       assertEquals(handlaggningId, rtfMaskinellRequestMessagePayload.getData().getHandlaggningId());
       assertEquals("d4ab4820-68d9-41e0-abe1-cd8f9865d275", rtfMaskinellRequestMessagePayload.getData().getAktivitetId());
+      assertEquals(processvyUrl, rtfMaskinellRequestMessagePayload.getData().getProcessvyUrl());
 
       responderRtfMaskinell.get(topicTimeout, TimeUnit.SECONDS);
 
@@ -46,6 +49,7 @@ class VabSmokeTest extends VabTestBase
       assertEquals(handlaggningId, rtfManuellKompletteringRequestMessagePayload.getData().getHandlaggningId());
       assertEquals("c58dd666-b3c1-4a30-91b8-76c3495668c6",
             rtfManuellKompletteringRequestMessagePayload.getData().getAktivitetId());
+      assertEquals(processvyUrl, rtfManuellKompletteringRequestMessagePayload.getData().getProcessvyUrl());
 
       responderRtfManuellKomplettering.get(topicTimeout, TimeUnit.SECONDS);
 
@@ -55,6 +59,7 @@ class VabSmokeTest extends VabTestBase
             RegelRequestMessagePayload.class);
       assertEquals(handlaggningId, rtfManuellRequestMessagePayload.getData().getHandlaggningId());
       assertEquals("c58dd666-b3c1-4a30-91b8-76c3495668c6", rtfManuellRequestMessagePayload.getData().getAktivitetId());
+      assertEquals(processvyUrl, rtfManuellRequestMessagePayload.getData().getProcessvyUrl());
 
       responderRtfManuell.get(topicTimeout, TimeUnit.SECONDS);
 
@@ -64,6 +69,7 @@ class VabSmokeTest extends VabTestBase
             RegelRequestMessagePayload.class);
       assertEquals(handlaggningId, bekraftaBeslutRequestMessagePayload.getData().getHandlaggningId());
       assertEquals("8cde2355-aea5-4951-916f-08319b2f1e99", bekraftaBeslutRequestMessagePayload.getData().getAktivitetId());
+      assertEquals(processvyUrl, bekraftaBeslutRequestMessagePayload.getData().getProcessvyUrl());
 
       responderBekraftaBeslut.get(topicTimeout, TimeUnit.SECONDS);
 
@@ -94,6 +100,7 @@ class VabSmokeTest extends VabTestBase
             RegelRequestMessagePayload.class);
       assertEquals(handlaggningId, maskinellPayload.getData().getHandlaggningId());
       assertEquals("d4ab4820-68d9-41e0-abe1-cd8f9865d275", maskinellPayload.getData().getAktivitetId());
+      assertEquals(processvyUrl, maskinellPayload.getData().getProcessvyUrl());
 
       responderRtfMaskinell.get(topicTimeout, TimeUnit.SECONDS);
 
@@ -104,6 +111,7 @@ class VabSmokeTest extends VabTestBase
             RegelRequestMessagePayload.class);
       assertEquals(handlaggningId, bekraftaPayload.getData().getHandlaggningId());
       assertEquals("8cde2355-aea5-4951-916f-08319b2f1e99", bekraftaPayload.getData().getAktivitetId());
+      assertEquals(processvyUrl, bekraftaPayload.getData().getProcessvyUrl());
 
       responderBekraftaBeslut.get(topicTimeout, TimeUnit.SECONDS);
 
@@ -155,6 +163,7 @@ class VabSmokeTest extends VabTestBase
             RegelRequestMessagePayload.class);
       assertEquals(handlaggningId, rtfManuellRequestMessagePayload.getData().getHandlaggningId());
       assertEquals("c58dd666-b3c1-4a30-91b8-76c3495668c6", rtfManuellRequestMessagePayload.getData().getAktivitetId());
+      assertEquals(processvyUrl, rtfManuellRequestMessagePayload.getData().getProcessvyUrl());
 
       responderRtfManuell.get(topicTimeout, TimeUnit.SECONDS);
 
