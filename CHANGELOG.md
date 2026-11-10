@@ -2,13 +2,27 @@
 
 Changelog of rimfrost-process-vab.
 
+## 0.0.6 (2026-11-10)
+
+### Bug Fixes
+
+-  tests ([88c4d](https://github.com/Forsakringskassan/rimfrost-process-vab/commit/88c4d2891872673) Nils Elveros)  
+-  bump versions ([f4f6c](https://github.com/Forsakringskassan/rimfrost-process-vab/commit/f4f6c4e61384a78) Nils Elveros)  
+-  bump subprocesses ([e4870](https://github.com/Forsakringskassan/rimfrost-process-vab/commit/e48702805d99f98) Nils Elveros)  
+-  **deps**  update dependency se.fk.github.rimfrost.regel.subprocess:rimfrost-regel-rtf-manuell-subprocess to v1.1.9 ([4cbdb](https://github.com/Forsakringskassan/rimfrost-process-vab/commit/4cbdbe0fb629822) renovate[bot])  
+
+### Dependency updates
+
+- update forsakringskassan/.github digest to cbc0db8 ([0f6c5](https://github.com/Forsakringskassan/rimfrost-process-vab/commit/0f6c506b3614a2c) renovate[bot])  
+- update forsakringskassan/.github digest to cbd74f1 ([32b6d](https://github.com/Forsakringskassan/rimfrost-process-vab/commit/32b6d6d4cd89853) renovate[bot])  
+- update forsakringskassan/.github digest to bfb01f7 ([7260e](https://github.com/Forsakringskassan/rimfrost-process-vab/commit/7260e0d2ce7529a) renovate[bot])  
+## rimfrost-1_2 (2026-09-25)
+
 ## 0.0.5 (2026-09-25)
 
 ### Bug Fixes
 
 -  Fix config response timeout and retry delay not being used ([f8586](https://github.com/Forsakringskassan/rimfrost-process-vab/commit/f8586685e4c9176) Lars Persson)  
-
-## rimfrost-1_2 (2026-09-23)
 
 ## 0.0.4 (2026-09-23)
 
