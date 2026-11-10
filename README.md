@@ -13,7 +13,7 @@ docker run -d \
 ```
 ## Processvy
 
-Processen har en processvy (stegindikatorn) som visar handläggaren var i processen en uppgift befinner sig. Processvy-länken `PROCESSVY_URL=/process/vab` i `application.properties` skickas med i regelanropen, och [processbeskrivning.json](src/main/resources/processbeskrivning.json) bredvid `vab.bpmn` listar processens steg och vilka aktivitets-ID:n som hör till varje steg. Stegen hämtas med `GET /processvy/steg?aktivitetId={uuid}`. Formatet beskrivs i [rimfrost-framework-process](https://github.com/Forsakringskassan/rimfrost-framework-process#processvy).
+Processen har en processvy (stegindikatorn) som visar handläggaren var i processen en uppgift befinner sig. Processvy-länken `processvy.url=/process/vab` i `application.properties` skickas med i regelanropen, och [processbeskrivning.json](src/main/resources/processbeskrivning.json) bredvid `vab.bpmn` listar processens steg och vilka aktivitets-ID:n som hör till varje steg. Stegen hämtas med `GET /processvy/steg?aktivitetId={uuid}`. Formatet beskrivs i [rimfrost-framework-process](https://github.com/Forsakringskassan/rimfrost-framework-process#processvy).
 
 Stegen beskrivs också i dokumentations-BPMN:en [docs/vab-processbeskrivning.bpmn](docs/vab-processbeskrivning.bpmn), som inte körs. Varje task är ett steg med rubrik, beskrivning och de aktivitets-ID:n som hör till steget. Processbeskrivningen ska på sikt genereras från den, och tills dess hålls de lika för hand.
 
