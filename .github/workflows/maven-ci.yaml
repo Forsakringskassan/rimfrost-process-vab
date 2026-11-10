@@ -4,7 +4,9 @@ on: [workflow_dispatch, workflow_call, push, pull_request]
 
 jobs:
   call-workflow:
+    permissions:
+      security-events: write
+      actions: read
+      contents: read
+      packages: write
     uses: Forsakringskassan/.github/.github/workflows/bundle-maven-ci.yaml@cbc0db833d2d0584b3b0e3b7ed4fd27867b3f6ed # main
-    secrets:
-      PACKAGES_RW_ACTOR: ${{ secrets.PACKAGES_RW_ACTOR }}
-      PACKAGES_RW_TOKEN: ${{ secrets.PACKAGES_RW_TOKEN }}

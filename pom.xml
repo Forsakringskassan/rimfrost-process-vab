@@ -21,6 +21,7 @@
     <kogito.bom.artifact-id>kogito-bom</kogito.bom.artifact-id>
     <kogito.bom.version>10.2.0</kogito.bom.version>
     <version.org.kie.kogito>10.2.0</version.org.kie.kogito>
+    <rimfrost-framework-process.version>2.0.0</rimfrost-framework-process.version>
   </properties>
 
   <dependencyManagement>
@@ -109,7 +110,14 @@
     <dependency>
       <groupId>se.fk.rimfrost.framework.process</groupId>
       <artifactId>rimfrost-framework-process</artifactId>
-      <version>1.6.8</version>
+      <version>${rimfrost-framework-process.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>se.fk.rimfrost.framework.process</groupId>
+      <artifactId>rimfrost-framework-process</artifactId>
+      <version>${rimfrost-framework-process.version}</version>
+      <classifier>tests</classifier>
+      <scope>test</scope>
     </dependency>
   </dependencies>
 
