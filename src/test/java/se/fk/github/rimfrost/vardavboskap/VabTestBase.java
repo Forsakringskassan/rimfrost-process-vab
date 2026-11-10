@@ -40,13 +40,13 @@ abstract class VabTestBase
    protected static final String vabHandlaggningRequestTopic = "vab-handlaggning-requests";
    protected static final String handlaggningResponseTopic = "handlaggning-responses";
    protected static final String rtfMaskinellRequestTopic = "rtf-maskinell-requests";
-   protected static final String rtfMaskinellResponseTopic = "vab-rtf-maskinell-responses";
+   protected static final String rtfMaskinellResponseTopic = "rtf-maskinell-responses";
    protected static final String rtfManuellRequestTopic = "rtf-manuell-requests";
-   protected static final String rtfManuellResponseTopic = "vab-rtf-manuell-responses";
+   protected static final String rtfManuellResponseTopic = "rtf-manuell-responses";
    protected static final String rtfManuellKompletteringRequestTopic = "rtf-manuell-komplettering-requests";
-   protected static final String rtfManuellKompletteringResponseTopic = "vab-rtf-manuell-komplettering-responses";
+   protected static final String rtfManuellKompletteringResponseTopic = "rtf-manuell-komplettering-responses";
    protected static final String bekraftaBeslutRequestTopic = "bekraftabeslut-requests";
-   protected static final String bekraftaBeslutResponseTopic = "vab-bekraftabeslut-responses";
+   protected static final String bekraftaBeslutResponseTopic = "bekraftabeslut-responses";
    protected static final int topicTimeout = 20;
 
    @ConfigProperty(name = "kafka.bootstrap.servers")
@@ -232,7 +232,7 @@ abstract class VabTestBase
       payload.setSpecversion(request.getSpecversion());
       payload.setId(request.getId());
       payload.setSource(request.getSource());
-      payload.setType(topic.startsWith("vab-") ? topic.substring("vab-".length()) : topic);
+      payload.setType(topic);
       payload.setTime(OffsetDateTime.now());
       payload.setKogitoparentprociid(request.getKogitoparentprociid());
       payload.setKogitorootprocid(request.getKogitorootprocid());
