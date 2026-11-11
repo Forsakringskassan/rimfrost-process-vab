@@ -2,6 +2,12 @@
 
 Changelog of rimfrost-process-vab.
 
+## 0.1.1 (2026-11-11)
+
+### Bug Fixes
+
+-  add group id to handlaggning-requests ([04dfd](https://github.com/Forsakringskassan/rimfrost-process-vab/commit/04dfdced17ff9ad) Nils Elveros)  
+
 ## 0.1.0 (2026-11-10)
 
 ### Features
