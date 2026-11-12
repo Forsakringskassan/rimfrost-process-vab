@@ -10,10 +10,3 @@ jobs:
       contents: read
       packages: write
     uses: Forsakringskassan/.github/.github/workflows/bundle-maven-ci.yaml@cbc0db833d2d0584b3b0e3b7ed4fd27867b3f6ed # main
-
-  validate-processbeskrivning:
-    permissions:
-      contents: read
-    uses: Forsakringskassan/rimfrost-framework-process/.github/workflows/validate-processbeskrivning.yaml@f1ebfe889bcd2932bd4a3a8110a2e6c7e7195055 # 2.1.1
-    with:
-      framework-ref: '2.1.1'
