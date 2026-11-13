@@ -2,6 +2,15 @@
 
 Changelog of rimfrost-process-vab.
 
+## 0.1.2 (2026-11-12)
+
+### Bug Fixes
+
+-  **deps**  use released rimfrost-framework-process 2.1.1 (FKPOC-1310) ([b2a2e](https://github.com/Forsakringskassan/rimfrost-process-vab/commit/b2a2e6dc7380405) LisaWedin_Ductus)  
+
+### Other changes
+
+
 ## 0.1.1 (2026-11-11)
 
 ### Bug Fixes
