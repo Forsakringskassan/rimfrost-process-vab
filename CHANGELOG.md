@@ -2,6 +2,12 @@
 
 Changelog of rimfrost-process-vab.
 
+## 0.1.3 (2026-11-13)
+
+### Bug Fixes
+
+-  Bump dependency versions ([8816c](https://github.com/Forsakringskassan/rimfrost-process-vab/commit/8816c34b86ca0b1) Lars Persson)  
+
 ## 0.1.2 (2026-11-12)
 
 ### Bug Fixes
