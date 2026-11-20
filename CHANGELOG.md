@@ -2,6 +2,12 @@
 
 Changelog of rimfrost-process-vab.
 
+## 0.1.4 (2026-11-20)
+
+### Bug Fixes
+
+-  bump subprocess deps: rtf-manuell to 1.1.15, rtf-maskinell to 1.1.10, bekraftabeslut to 1.1.11 ([a0479](https://github.com/Forsakringskassan/rimfrost-process-vab/commit/a04795c98f45a34) Ulf Slunga)  
+
 ## 0.1.3 (2026-11-13)
 
 ### Bug Fixes
